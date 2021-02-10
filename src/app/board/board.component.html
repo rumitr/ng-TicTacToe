@@ -1,0 +1,19 @@
+<div style="display: flex; justify-content: center; align-items: center; min-height: 85vh; background-color: #1d1d1d;"> 
+    <div>
+        <h2 *ngIf="winner; else game " style="text-align: center; margin-bottom: 10px;">
+            Player {{winner}} won the game!!!
+        </h2>
+        <div style="margin-top: 10px; text-align: center; ">
+            <button  class="newgame-btn" (click)="newGame()">Start new game</button>
+        </div>
+    </div>
+    <ng-template #game >
+        <h1 style="text-align: center; margin-bottom: 10px;">Current Player :{{player}}</h1>
+        <main>
+            <app-square 
+            *ngFor="let val of squares; let i = index" [value]="val" 
+            (click)="makeMove(i)"> 
+            </app-square>
+        </main>
+    </ng-template>
+</div>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "socialapp-5e10e": {
+      "hosting": {
+        "ticTacToe": [
+          "socialapp-5e10e"
+        ]
+      }
+    }
+  }
+}
